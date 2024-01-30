@@ -1,10 +1,12 @@
-sap.ui.define(['sap/ui/core/UIComponent'],
-function (UIComponent) {
-	"use strict";
+sap.ui.define(
+  ["sap/ui/core/UIComponent", "sap/m/MessageToast"],
+  function (UIComponent, MessageToast) {
+    "use strict";
 
-	return UIComponent.extend("sap.f.sample.ShellBar.Component", {
-		metadata: {
-			manifest: "json"
-		}
-	});
-});
+    return UIComponent.extend("sap.f.sample.ShellBar.Component", {
+      onInit() {
+        MessageToast.show("Start Component");
+      },
+    });
+  },
+);

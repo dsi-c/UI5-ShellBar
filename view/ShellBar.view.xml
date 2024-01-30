@@ -1,27 +1,32 @@
 <mvc:View
 	controllerName="sap.f.sample.ShellBar.controller.ShellBar"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.f"
+	xmlns:f="sap.f"
 	xmlns:m="sap.m"
 	xmlns:layout= "sap.ui.layout"
 	height="100%">
-	<ShellBar
+	<f:ShellBar
 			title="Application Title"
 			secondTitle="Short description"
-			homeIcon="./resources/sap/ui/documentation/sdk/images/logo_ui5.png"
+			homeIcon="https://sapui5.hana.ondemand.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png"
 			showCopilot="true"
 			showSearch="true"
 			showNotifications="true"
 			showProductSwitcher="true"
-			notificationsNumber="2">
-		<menu>
+			notificationsNumber="2"
+			homeIconPressed="OnHomeIconPressed"
+			>
+		<f:menu>
 			<m:Menu>
 				<m:MenuItem text="Flight booking" icon="sap-icon://flight" />
 				<m:MenuItem text="Car rental" icon="sap-icon://car-rental" />
 			</m:Menu>
-		</menu>
-		<profile>
+		</f:menu>
+		<f:additionalContent>
+			<m:OverflowToolbarButton text="Test button" icon="sap-icon://home" /> 
+		</f:additionalContent>
+		<f:profile>
 			<m:Avatar initials="UI"/>
-		</profile>
-	</ShellBar>
+		</f:profile>
+	</f:ShellBar>
 </mvc:View>
